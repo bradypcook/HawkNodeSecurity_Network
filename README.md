@@ -3,9 +3,9 @@
 <p align="center">
   <a href="#overview">Overview</a>
   •
-  <a href="#Upcoming Features">Upcoming Features</a>
+  <a href="#upcoming-features">Upcoming Features</a>
   •
-  <a href="#Documentation Menu">Documentation Menu</a>
+  <a href="#documentation-menu">Documentation Menu</a>
 </p>
 
 
