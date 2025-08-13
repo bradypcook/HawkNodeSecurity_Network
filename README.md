@@ -19,18 +19,21 @@ I wanted to do this project to demonstrate my ability to set up and configure en
 
 # Upcoming Features
 
-Here's what's coming in the future (Phase 2):
+Here's what's coming in the future (Phase 2 -- Date TBD):
 
--Improved addressing between router links (/31)
--Access Control Lists
--ASA Firewall Devices
--NAT (Network Address
--Restructured branches
--Port Security
--Email Network
--FTP instead of TFTP
--Interface Descriptions
--and more (Date TBD)!!
+<ul>
+<li>-Improved addressing between router links (/31) </li>
+<li>-Access Control Lists </li>
+<li>-ASA Firewall Devices </li>
+<li>-NAT (Network Address Translation)</li>
+<li>-Port Security </li>
+<li>-Restructured branches </li>
+<li>-FTP instead of TFTP </li>
+<li>-Email network </li>
+<li>-Interface Descriptions </li>
+<li>-and more!! </li>
+</ul>
+
 
 # Documentation
 
