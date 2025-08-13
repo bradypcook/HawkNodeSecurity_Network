@@ -22,16 +22,16 @@ I wanted to do this project to demonstrate my ability to set up and configure en
 Here's what's coming in the future (Phase 2 -- Date TBD):
 
 <ul>
-<li>-Improved addressing between router links (/31) </li>
-<li>-Access Control Lists </li>
-<li>-ASA Firewall Devices </li>
-<li>-NAT (Network Address Translation)</li>
-<li>-Port Security </li>
-<li>-Restructured branches </li>
-<li>-FTP instead of TFTP </li>
-<li>-Email network </li>
-<li>-Interface Descriptions </li>
-<li>-and more!! </li>
+<li>Improved addressing between router links (/31) </li>
+<li>Access Control Lists </li>
+<li>ASA Firewall Devices </li>
+<li>NAT (Network Address Translation)</li>
+<li>Port Security (for switches) </li>
+<li>Restructured branches </li>
+<li>FTP instead of TFTP </li>
+<li>Email network </li>
+<li>Interface Descriptions </li>
+<li>and more!! </li>
 </ul>
 
 
