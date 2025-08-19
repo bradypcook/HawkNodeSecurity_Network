@@ -3,7 +3,7 @@
 <p align="center">
   <a href="#overview">Overview</a>
   •
-  <a href="#upcoming-features">Upcoming Features</a>
+  <a href="#upcoming-features-as-of-8182025">Upcoming Features</a>
   •
   <a href="#documentation-menu">Documentation Menu</a>
 </p>
@@ -51,7 +51,8 @@ Here's what's coming in the future (Phase 2 -- Date TBD):
   <a href="#passwords--security">Passwords & Security</a>
 </p>
 
-\*A PDF version of the documentation can also be found at the link below:
+\*A PDF version of the documentation can be downloaded at the link below:
+<br />
 https://docs.google.com/document/d/1-Vc9t8vtXoVSt0ADlW3ko_1DJ-e-SblX3i97_mBOnME/export?format=pdf
 
 # Network Design/Topology
