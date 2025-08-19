@@ -8,16 +8,15 @@
   <a href="#documentation-menu">Documentation Menu</a>
 </p>
 
-
 # Overview
 
 I created a Campus Area Network (CAN) for a hypothetical company (HawkNode Security), where I implemented typical industry practices while designing and configuring the network.
 
 I wanted to do this project to demonstrate my ability to practically set up and configure enterprise networks that I have previously learned while studying for my CCNA.
 
+NOTE: Due to the Activity Wizard, it may be harder to load the .pka file on some devices. For better performance, you can run the unlocked .pkt version for better performance.
 
-
-# Upcoming Features
+# Upcoming Features (as of 8/18/2025)
 
 Here's what's coming in the future (Phase 2 -- Date TBD):
 
@@ -33,7 +32,6 @@ Here's what's coming in the future (Phase 2 -- Date TBD):
 <li>Interface Descriptions </li>
 <li>and more!! </li>
 </ul>
-
 
 # Documentation Menu
 
@@ -53,9 +51,8 @@ Here's what's coming in the future (Phase 2 -- Date TBD):
   <a href="#passwords--security">Passwords & Security</a>
 </p>
 
-*A PDF version of the documentation can also be found at the link below:
-https://docs.google.com/document/d/1-Vc9t8vtXoVSt0ADlW3ko_1DJ-e-SblX3i97_mBOnME/edit?usp=sharing 
-
+\*A PDF version of the documentation can also be found at the link below:
+https://docs.google.com/document/d/1-Vc9t8vtXoVSt0ADlW3ko_1DJ-e-SblX3i97_mBOnME/export?format=pdf
 
 # Network Design/Topology
 
@@ -296,8 +293,7 @@ The following networks are correlated to the following VLANs:
     </tbody>
   </table>
 
-
-  Additionally, the addressing information for the company servers is below (NOTE: Static IPs are configured for the servers to prevent DHCP issues)
+Additionally, the addressing information for the company servers is below (NOTE: Static IPs are configured for the servers to prevent DHCP issues)
 
   <table aria-describedby="desc">
     <thead>
@@ -452,7 +448,8 @@ All WiFi networks have a randomly generated password, signal strength of 250 met
 # Etherchannel Information
 
 All etherchannels are configured in PAgP (Cisco proprietary EtherChannel protocol)
-**NOTE: Group Number 4 is only present in the LA branch
+\*\*NOTE: Group Number 4 is only present in the LA branch
+
 <table aria-describedby="desc">
     <thead>
       <tr>
@@ -483,8 +480,8 @@ All etherchannels are configured in PAgP (Cisco proprietary EtherChannel protoco
 # Passwords & Security
 
 Login Block (Router ONLY)
-*All login blocks will be set for the following format:
- login block-for [180 seconds] attempts [3] within [60 seconds]
+\*All login blocks will be set for the following format:
+login block-for [180 seconds] attempts [3] within [60 seconds]
 
 Network Address Translation (Router ONLY)
 Configuration items TBD
@@ -497,7 +494,7 @@ Configuration items TBD
 
 Console/Enable Mode Passwords
 *Follow this format: RoleAbbr-SiteDevice
-*COMMENT: While I know these passwords aren’t as secure, they follow this format for configuration purposes (as it would be difficult to remember random passwords for the entire network) 
+*COMMENT: While I know these passwords aren’t as secure, they follow this format for configuration purposes (as it would be difficult to remember random passwords for the entire network)
 
  <table aria-describedby="desc">
     <thead>
@@ -508,7 +505,7 @@ Console/Enable Mode Passwords
       </tr>
     </thead>
     <tbody>
-      <tr><td data-label="Console Mode Password">Con-NYCRT</td><td data-label="Device Name">NYC-RT</td><td data-label="Enable Mode Password">Enb-NYCRT</td></tr>
+      <tr><td data-label="Console Mode Password">Con-NYCRT</td><td data-label="Device Name"><span style="color: aqua; font-weight: bold;">NYC-RT</span></td><td data-label="Enable Mode Password">Enb-NYCRT</td></tr>
       <tr><td data-label="Console Mode Password">Con-NYCS1</td><td data-label="Device Name">NYC-S1</td><td data-label="Enable Mode Password">Enb-NYCS1</td></tr>
       <tr><td data-label="Console Mode Password">Con-NYCS2</td><td data-label="Device Name">NYC-S1</td><td data-label="Enable Mode Password">Enb-NYCS2</td></tr>
       <tr><td data-label="Console Mode Password">Con-NYCS3</td><td data-label="Device Name">NYC-S3</td><td data-label="Enable Mode Password">Enb-NYCS3</td></tr>

@@ -1,0 +1,218 @@
+A list of commands that I used to save time while configuring deviuces across the network.
+
+ROUTER
+
+banner motd "Property of HawkNodeSecurity. Unauthorized access is not permitted. Violators will be prosecuted to the full extent of the law."
+ip dhcp excluded-address 16.16.16.1 16.16.16.5
+ip dhcp excluded-address 26.26.26.1 26.26.26.5
+ip dhcp excluded-address 36.36.36.1 36.36.36.5
+ip dhcp excluded-address 46.46.46.1 46.46.46.5
+ip dhcp excluded-address 56.56.56.1 56.56.56.5
+ip dhcp excluded-address 66.66.66.1 66.66.66.5
+ip dhcp excluded-address 76.76.76.1 76.76.76.5
+ip dhcp excluded-address 106.106.106.1 106.106.106.5
+
+ip dhcp pool Floor1
+network 16.16.16.0 255.255.255.0
+default-router 16.16.16.1
+dns-server 23.23.23.2
+ex
+ip dhcp pool Floor2
+network 26.26.26.0 255.255.255.0
+default-router 26.26.26.1
+dns-server 23.23.23.2
+ex
+ip dhcp pool Floor3
+network 36.36.36.0 255.255.255.0
+default-router 36.36.36.1
+dns-server 23.23.23.2
+ex
+ip dhcp pool Floor4
+network 46.46.46.0 255.255.255.0
+default-router 46.46.46.1
+dns-server 23.23.23.2
+ex
+ip dhcp pool Floor5
+network 56.56.56.0 255.255.255.0
+default-router 56.56.56.1
+dns-server 23.23.23.2
+ex
+ip dhcp pool Wireless-Traffic
+network 63.63.63.0 255.255.255.0
+default-router 63.63.63.1
+ex
+ip dhcp pool IOT-Devices
+network 73.73.73.0 255.255.255.0
+default-router 73.73.73.1
+ex
+ip dhcp pool Management-SVI
+network 106.106.106.0 255.255.255.0
+default-router 106.106.106.1
+ex
+
+
+int g0/2.10
+encapsulation dot1Q 10
+ip address 16.16.16.1 255.255.255.0
+int g0/2.20
+encapsulation dot1Q 20
+ip address 26.26.26.1 255.255.255.0
+int g0/2.30
+encapsulation dot1Q 30
+ip address 36.36.36.1 255.255.255.0
+int g0/2.40
+encapsulation dot1Q 40
+ip address 46.46.46.1 255.255.255.0
+int g0/2.50
+encapsulation dot1Q 50
+ip address 56.56.56.1 255.255.255.0
+int g0/2.60
+encapsulation dot1Q 60
+ip address 62.62.62.1 255.255.255.0
+int g0/2.70
+encapsulation dot1Q 70
+ip address 72.72.72.1 255.255.255.0
+int g0/2.100
+encapsulation dot1Q 100
+ip address 106.106.106.1 255.255.255.0
+int g0/2
+no shut
+router ospf 1
+network 16.16.16.0 255.255.255.0 area 1
+network 26.26.26.0 255.255.255.0 area 1
+network 36.36.36.0 255.255.255.0 area 1
+network 46.46.46.0 255.255.255.0 area 1
+network 56.56.56.0 255.255.255.0 area 1
+network 66.66.66.0 255.255.255.0 area 1
+network 76.76.76.0 255.255.255.0 area 1
+network 106.106.106.1 255.255.255.0 area 1
+
+SWITCH
+
+en
+conf t
+hostname SEA-S4
+vlan 10
+name Floor1
+vlan 20
+name Floor2
+vlan 30
+name Floor3
+vlan 40
+name Floor4
+vlan 50
+name Floor5
+vlan 55
+name Native
+vlan 60
+name Wireless-Devices
+vlan 70
+name IOT-Devices
+vlan 75
+name Voice-Traffic
+vlan 100
+name Management
+vlan 200
+name Non_Allocated_Ports
+ex
+banner motd "Property of HawkNodeSecurity. Unauthorized access is not permitted. Violators will be prosecuted to the full extent of the law."
+interface range f0/7-9
+shutdown
+channel-group 3 mode desirable
+no shutdown
+interface port-channel 3
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50,55,60,70,75,100
+switchport trunk native vlan 55
+ex
+interface vlan 100
+ip address dhcp
+
+interface FastEthernet0/24
+switchport mode trunk
+switchport trunk native vlan 55
+switchport trunk allowed vlan 10,20,30,40,50,55,60,70,75,100
+no shut
+ex
+
+MANAGEMENT-SVI ITEMS
+
+ip dhcp excluded-address 102.102.102.1 102.102.102.5
+ip dhcp pool Management-SVI
+network 102.102.102.0 255.255.255.0
+default-router 102.102.102.1
+ex
+int g0/0.100
+encapsulation dot1Q 100
+ip address 102.102.102.1 255.255.255.0
+ex
+router ospf 1
+network 102.102.102.0 255.255.255.0 area 1
+
+en
+conf t
+interface vlan 100
+ip address dhcp
+ex
+do copy r st
+
+WIRELESS TRAFFIC & IOT ITEMS
+en
+conf t
+vlan 60
+name Wireless-Traffic
+int f0/7
+switchport access vlan 60
+ex
+
+
+ip dhcp excluded-address 63.63.63.1 63.63.63.5
+ip dhcp excluded-address 73.73.73.1 73.73.73.5
+ip dhcp pool Wireless-Traffic
+network 63.63.63.0 255.255.255.0
+default-router 63.63.63.1
+ex
+ip dhcp pool IOT-Devices
+network 73.73.73.0 255.255.255.0
+default-router 73.73.73.1
+ex
+int g0/2.60
+encapsulation dot1Q 60
+ip address 63.63.63.1 255.255.255.0
+ex
+int g0/2.70
+encapsulation dot1Q 70
+ip address 73.73.73.1 255.255.255.0
+ex
+router ospf 1
+network 63.63.63.0 255.255.255.0 area 1
+network 73.73.73.0 255.255.255.0 area 1
+
+
+
+PASSWORD/SECURITY ITEMS
+
+
+en
+conf t
+enable password Enb-ATLS4
+line console 0
+password Con-ATLS4
+login
+exit
+service password-encryption
+do copy r st
+
+en
+conf t
+line console 0
+password Con-AUSRT
+login
+exit
+enable password Enb-AUSRT
+login block-for 180 attempts 3 within 60
+service password-encryption
+do copy r st
+
+copy start tftp
+23.23.23.3
