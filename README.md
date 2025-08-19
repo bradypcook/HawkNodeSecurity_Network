@@ -52,6 +52,7 @@ Here's what's coming in the future (Phase 2 -- Date TBD):
 </p>
 
 \*A PDF version of the documentation can be downloaded at the link below:
+<br />
 https://docs.google.com/document/d/1-Vc9t8vtXoVSt0ADlW3ko_1DJ-e-SblX3i97_mBOnME/export?format=pdf
 
 # Network Design/Topology
