@@ -14,7 +14,7 @@ I created a Campus Area Network (CAN) for a hypothetical company (HawkNode Secur
 
 I wanted to do this project to demonstrate my ability to practically set up and configure enterprise networks that I have previously learned while studying for my CCNA.
 
-NOTE: Due to the Activity Wizard, it may be harder to load the .pka file on some devices. For better performance, you can run the unlocked .pkt version for better performance.
+NOTE: Due to the Activity Wizard, it may be harder to load the .pka file on some devices. For better performance, you can run the unlocked .pkt version.
 
 # Upcoming Features (as of 8/18/2025)
 
@@ -91,7 +91,7 @@ The network is set up in a ring configuration, with 2 external links to other br
       <tr>
         <td data-label="Device Name">DC-RT</td>
         <td data-label="Interface" class="mono">G0/2</td>
-        <td data-label="IP Address">See Network Map</td>
+        <td data-label="IP Address"><b>See Network Map</b></td>
         <td data-label="OSPF Info (Process, Area)" class="mono">(1,1)</td>
         <td data-label="Router ID"></td>
       </tr>
@@ -133,7 +133,7 @@ The network is set up in a ring configuration, with 2 external links to other br
       <tr>
         <td data-label="Device Name">AUS-RT</td>
         <td data-label="Interface" class="mono">G0/2</td>
-        <td data-label="IP Address">See Network Map</td>
+        <td data-label="IP Address"><b>See Network Map</b></td>
         <td data-label="OSPF Info (Process, Area)" class="mono">(1,1)</td>
         <td data-label="Router ID"></td>
       </tr>
@@ -154,7 +154,7 @@ The network is set up in a ring configuration, with 2 external links to other br
       <tr>
         <td data-label="Device Name">LA-RT</td>
         <td data-label="Interface" class="mono">G0/2</td>
-        <td data-label="IP Address">See Network Map</td>
+        <td data-label="IP Address"><b>See Network Map</b></td>
         <td data-label="OSPF Info (Process, Area)" class="mono">(1,1)</td>
         <td data-label="Router ID"></td>
       </tr>
@@ -175,7 +175,7 @@ The network is set up in a ring configuration, with 2 external links to other br
       <tr>
         <td data-label="Device Name">SLC-RT</td>
         <td data-label="Interface" class="mono">G0/2</td>
-        <td data-label="IP Address">See Network Map</td>
+        <td data-label="IP Address"><b>See Network Map</b></td>
         <td data-label="OSPF Info (Process, Area)" class="mono">(1,1)</td>
         <td data-label="Router ID"></td>
       </tr>
@@ -196,16 +196,16 @@ The network is set up in a ring configuration, with 2 external links to other br
       <tr>
         <td data-label="Device Name">SEA-RT</td>
         <td data-label="Interface" class="mono">G0/2</td>
-        <td data-label="IP Address">See Network Map</td>
+        <td data-label="IP Address"><b>See Network Map</b></td>
         <td data-label="OSPF Info (Process, Area)" class="mono">(1,1)</td>
         <td data-label="Router ID"></td>
       </tr>
       <tr>
         <td data-label="Device Name">MIN-RT</td>
         <td data-label="Interface" class="mono">G0/0</td>
-        <td data-label="IP Address">See Network Map</td>
+        <td data-label="IP Address"><b>See Network Map</b></td>
         <td data-label="OSPF Info (Process, Area)" class="mono">(1,1)</td>
-        <td data-label="Router ID"></td>
+        <td data-label="Router ID">9.9.9.1</td>
       </tr>
       <tr>
         <td data-label="Device Name">MIN-RT</td>
@@ -224,9 +224,9 @@ The network is set up in a ring configuration, with 2 external links to other br
       <tr>
         <td data-label="Device Name">NYC-RT</td>
         <td data-label="Interface" class="mono">G0/0</td>
-        <td data-label="IP Address">See Network Map</td>
+        <td data-label="IP Address"><b>See Network Map</b></td>
         <td data-label="OSPF Info (Process, Area)" class="mono">(1,1)</td>
-        <td data-label="Router ID"></td>
+        <td data-label="Router ID">2.2.2.1</td>
       </tr>
       <tr>
         <td data-label="Device Name">NYC-RT</td>
@@ -449,6 +449,7 @@ All WiFi networks have a randomly generated password, signal strength of 250 met
 # Etherchannel Information
 
 All etherchannels are configured in PAgP (Cisco proprietary EtherChannel protocol)
+<br />
 \*\*NOTE: Group Number 4 is only present in the LA branch
 
 <table aria-describedby="desc">
@@ -481,20 +482,27 @@ All etherchannels are configured in PAgP (Cisco proprietary EtherChannel protoco
 # Passwords & Security
 
 Login Block (Router ONLY)
+<br />
 \*All login blocks will be set for the following format:
+<br />
 login block-for [180 seconds] attempts [3] within [60 seconds]
 
 Network Address Translation (Router ONLY)
+<br />
 Configuration items TBD
 
 Access Control Lists (Router ONLY)
+<br />
 Configuration items TBD
 
 Switchport Security (Switch ONLY)
+<br />
 Configuration items TBD
 
 Console/Enable Mode Passwords
+<br />
 *Follow this format: RoleAbbr-SiteDevice
+<br />
 *COMMENT: While I know these passwords aren’t as secure, they follow this format for configuration purposes (as it would be difficult to remember random passwords for the entire network)
 
  <table aria-describedby="desc">
@@ -506,46 +514,46 @@ Console/Enable Mode Passwords
       </tr>
     </thead>
     <tbody>
-      <tr><td data-label="Console Mode Password">Con-NYCRT</td><td data-label="Device Name">NYC-RT</td><td data-label="Enable Mode Password">Enb-NYCRT</td></tr>
-      <tr><td data-label="Console Mode Password">Con-NYCS1</td><td data-label="Device Name">NYC-S1</td><td data-label="Enable Mode Password">Enb-NYCS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-NYCS2</td><td data-label="Device Name">NYC-S1</td><td data-label="Enable Mode Password">Enb-NYCS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-NYCS3</td><td data-label="Device Name">NYC-S3</td><td data-label="Enable Mode Password">Enb-NYCS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-NYCS4</td><td data-label="Device Name">NYC-S4</td><td data-label="Enable Mode Password">Enb-NYCS4</td></tr>
-      <tr><td data-label="Console Mode Password">Con-DCRT</td><td data-label="Device Name">DC-RT</td><td data-label="Enable Mode Password">Enb-DCRT</td></tr>
-      <tr><td data-label="Console Mode Password">Con-DCS1</td><td data-label="Device Name">DC-S1</td><td data-label="Enable Mode Password">Enb-DCS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-DCS2</td><td data-label="Device Name">DC-S2</td><td data-label="Enable Mode Password">Enb-DCS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-DCS3</td><td data-label="Device Name">DC-S3</td><td data-label="Enable Mode Password">Enb-DCS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-DCS4</td><td data-label="Device Name">DC-S4</td><td data-label="Enable Mode Password">Enb-DCS4</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLRT</td><td data-label="Device Name">ATL-RT</td><td data-label="Enable Mode Password">Enb-ATLRT</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLS1</td><td data-label="Device Name">ATL-S1</td><td data-label="Enable Mode Password">Enb-ATLS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLS2</td><td data-label="Device Name">ATL-S2</td><td data-label="Enable Mode Password">Enb-ATLS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLS3</td><td data-label="Device Name">ATL-S3</td><td data-label="Enable Mode Password">Enb-ATLS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLS4</td><td data-label="Device Name">ATL-S4</td><td data-label="Enable Mode Password">Enb-ATLS4</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSRT</td><td data-label="Device Name">AUS-RT</td><td data-label="Enable Mode Password">Enb-AUSRT</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS1</td><td data-label="Device Name">AUS-S1</td><td data-label="Enable Mode Password">Enb-AUSS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS2</td><td data-label="Device Name">AUS-S2</td><td data-label="Enable Mode Password">Enb-AUSS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS3</td><td data-label="Device Name">AUS-S3</td><td data-label="Enable Mode Password">Enb-AUSS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS4</td><td data-label="Device Name">AUS-S4</td><td data-label="Enable Mode Password">Enb-AUSS4</td></tr>
-      <tr><td data-label="Console Mode Password">Con-LART</td><td data-label="Device Name">LA-RT</td><td data-label="Enable Mode Password">Enb-LART</td></tr>
-      <tr><td data-label="Console Mode Password">Con-LAS1</td><td data-label="Device Name">LA-S1</td><td data-label="Enable Mode Password">Enb-LAS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-LAS2</td><td data-label="Device Name">LA-S2</td><td data-label="Enable Mode Password">Enb-LAS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-LAS3</td><td data-label="Device Name">LA-S3</td><td data-label="Enable Mode Password">Enb-LAS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-LAS4</td><td data-label="Device Name">LA-S4</td><td data-label="Enable Mode Password">Enb-LAS4</td></tr>
-      <tr><td data-label="Console Mode Password">Con-LAS5</td><td data-label="Device Name">LA-S5</td><td data-label="Enable Mode Password">Enb-LAS5</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SLCRT</td><td data-label="Device Name">SLC-RT</td><td data-label="Enable Mode Password">Enb-SLCRT</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SLCS1</td><td data-label="Device Name">SLC-S1</td><td data-label="Enable Mode Password">Enb-SLCS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SLCS2</td><td data-label="Device Name">SLC-S2</td><td data-label="Enable Mode Password">Enb-SLCS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SLCS3</td><td data-label="Device Name">SLC-S3</td><td data-label="Enable Mode Password">Enb-SLCS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SLCS4</td><td data-label="Device Name">SLC-S4</td><td data-label="Enable Mode Password">Enb-SLCS4</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SEART</td><td data-label="Device Name">SEA-RT</td><td data-label="Enable Mode Password">Enb-SEART</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SEAS1</td><td data-label="Device Name">SEA-S1</td><td data-label="Enable Mode Password">Enb-SEAS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SEAS2</td><td data-label="Device Name">SEA-S2</td><td data-label="Enable Mode Password">Enb-SEAS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SEAS3</td><td data-label="Device Name">SEA-S3</td><td data-label="Enable Mode Password">Enb-SEAS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-SEAS4</td><td data-label="Device Name">SEA-S4</td><td data-label="Enable Mode Password">Enb-SEAS4</td></tr>
-      <tr><td data-label="Console Mode Password">Con-MINRT</td><td data-label="Device Name">MIN-RT</td><td data-label="Enable Mode Password">Enb-MINRT</td></tr>
-      <tr><td data-label="Console Mode Password">Con-MINS1</td><td data-label="Device Name">MIN-S1</td><td data-label="Enable Mode Password">Enb-MINS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-MINS2</td><td data-label="Device Name">MIN-S2</td><td data-label="Enable Mode Password">Enb-MINS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-MINS3</td><td data-label="Device Name">MIN-S3</td><td data-label="Enable Mode Password">Enb-MINS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-MINS4</td><td data-label="Device Name">MIN-S4</td><td data-label="Enable Mode Password">Enb-MINS4</td></tr>
+      <tr><td data-label="Console Mode Password">Con-NYCRT</td><td data-label="Device Name"><b><i>NYC-RT</i></b></td><td data-label="Enable Mode Password">Enb-NYCRT</td></tr>
+      <tr><td data-label="Console Mode Password">Con-NYCS1</td><td data-label="Device Name"><b><i>NYC-S1</i></b></td><td data-label="Enable Mode Password">Enb-NYCS1</td></tr>
+      <tr><td data-label="Console Mode Password">Con-NYCS2</td><td data-label="Device Name"><b><i>NYC-S1</i></b></td><td data-label="Enable Mode Password">Enb-NYCS2</td></tr>
+      <tr><td data-label="Console Mode Password">Con-NYCS3</td><td data-label="Device Name"><b><i>NYC-S3</i></b></td><td data-label="Enable Mode Password">Enb-NYCS3</td></tr>
+      <tr><td data-label="Console Mode Password">Con-NYCS4</td><td data-label="Device Name"><b><i>NYC-S4</i></b></td><td data-label="Enable Mode Password">Enb-NYCS4</td></tr>
+      <tr><td data-label="Console Mode Password">Con-DCRT</td><td data-label="Device Name"><b><i>DC-RT</i></b></td><td data-label="Enable Mode Password">Enb-DCRT</td></tr>
+      <tr><td data-label="Console Mode Password">Con-DCS1</td><td data-label="Device Name"><b><i>DC-S1</i></b></td><td data-label="Enable Mode Password">Enb-DCS1</td></tr>
+      <tr><td data-label="Console Mode Password">Con-DCS2</td><td data-label="Device Name"><b><i>DC-S2</i></b></td><td data-label="Enable Mode Password">Enb-DCS2</td></tr>
+      <tr><td data-label="Console Mode Password">Con-DCS3</td><td data-label="Device Name"><b><i>DC-S3</i></b></td><td data-label="Enable Mode Password">Enb-DCS3</td></tr>
+      <tr><td data-label="Console Mode Password">Con-DCS4</td><td data-label="Device Name"><b><i>DC-S4</i></b></td><td data-label="Enable Mode Password">Enb-DCS4</td></tr>
+      <tr><td data-label="Console Mode Password">Con-ATLRT</td><td data-label="Device Name"><b><i>ATL-RT</i></b></td><td data-label="Enable Mode Password">Enb-ATLRT</td></tr>
+      <tr><td data-label="Console Mode Password">Con-ATLS1</td><td data-label="Device Name"><b><i>ATL-S1</i></b></td><td data-label="Enable Mode Password">Enb-ATLS1</td></tr>
+      <tr><td data-label="Console Mode Password">Con-ATLS2</td><td data-label="Device Name"><b><i>ATL-S2</i></b></td><td data-label="Enable Mode Password">Enb-ATLS2</td></tr>
+      <tr><td data-label="Console Mode Password">Con-ATLS3</td><td data-label="Device Name"><b><i>ATL-S3</i></b></td><td data-label="Enable Mode Password">Enb-ATLS3</td></tr>
+      <tr><td data-label="Console Mode Password">Con-ATLS4</td><td data-label="Device Name"><b><i>ATL-S4</i></b></td><td data-label="Enable Mode Password">Enb-ATLS4</td></tr>
+      <tr><td data-label="Console Mode Password">Con-AUSRT</td><td data-label="Device Name"><b><i>AUS-RT</i></b></td><td data-label="Enable Mode Password">Enb-AUSRT</td></tr>
+      <tr><td data-label="Console Mode Password">Con-AUSS1</td><td data-label="Device Name"><b><i>AUS-S1</i></b></td><td data-label="Enable Mode Password">Enb-AUSS1</td></tr>
+      <tr><td data-label="Console Mode Password">Con-AUSS2</td><td data-label="Device Name"><b><i>AUS-S2</i></b></td><td data-label="Enable Mode Password">Enb-AUSS2</td></tr>
+      <tr><td data-label="Console Mode Password">Con-AUSS3</td><td data-label="Device Name"><b><i>AUS-S3</i></b></td><td data-label="Enable Mode Password">Enb-AUSS3</td></tr>
+      <tr><td data-label="Console Mode Password">Con-AUSS4</td><td data-label="Device Name"><b><i>AUS-S4</i></b></td><td data-label="Enable Mode Password">Enb-AUSS4</td></tr>
+      <tr><td data-label="Console Mode Password">Con-LART</td><td data-label="Device Name"><b><i>LA-RT</i></b></td><td data-label="Enable Mode Password">Enb-LART</td></tr>
+      <tr><td data-label="Console Mode Password">Con-LAS1</td><td data-label="Device Name"><b><i>LA-S1</i></b></td><td data-label="Enable Mode Password">Enb-LAS1</td></tr>
+      <tr><td data-label="Console Mode Password">Con-LAS2</td><td data-label="Device Name"><b><i>LA-S2</i></b></td><td data-label="Enable Mode Password">Enb-LAS2</td></tr>
+      <tr><td data-label="Console Mode Password">Con-LAS3</td><td data-label="Device Name"><b><i>LA-S3</i></b></td><td data-label="Enable Mode Password">Enb-LAS3</td></tr>
+      <tr><td data-label="Console Mode Password">Con-LAS4</td><td data-label="Device Name"><b><i>LA-S4</i></b></td><td data-label="Enable Mode Password">Enb-LAS4</td></tr>
+      <tr><td data-label="Console Mode Password">Con-LAS5</td><td data-label="Device Name"><b><i>LA-S5</i></b></td><td data-label="Enable Mode Password">Enb-LAS5</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SLCRT</td><td data-label="Device Name"><b><i>SLC-RT</i></b></td><td data-label="Enable Mode Password">Enb-SLCRT</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SLCS1</td><td data-label="Device Name"><b><i>SLC-S1</i></b></td><td data-label="Enable Mode Password">Enb-SLCS1</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SLCS2</td><td data-label="Device Name"><b><i>SLC-S2</i></b></td><td data-label="Enable Mode Password">Enb-SLCS2</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SLCS3</td><td data-label="Device Name"><b><i>SLC-S3</i></b></td><td data-label="Enable Mode Password">Enb-SLCS3</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SLCS4</td><td data-label="Device Name"><b><i>SLC-S4</i></b></td><td data-label="Enable Mode Password">Enb-SLCS4</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SEART</td><td data-label="Device Name"><b><i>SEA-RT</i></b></td><td data-label="Enable Mode Password">Enb-SEART</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SEAS1</td><td data-label="Device Name"><b><i>SEA-S1</i></b></td><td data-label="Enable Mode Password">Enb-SEAS1</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SEAS2</td><td data-label="Device Name"><b><i>SEA-S2</i></b></td><td data-label="Enable Mode Password">Enb-SEAS2</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SEAS3</td><td data-label="Device Name"><b><i>SEA-S3</i></b></td><td data-label="Enable Mode Password">Enb-SEAS3</td></tr>
+      <tr><td data-label="Console Mode Password">Con-SEAS4</td><td data-label="Device Name"><b><i>SEA-S4</i></b></td><td data-label="Enable Mode Password">Enb-SEAS4</td></tr>
+      <tr><td data-label="Console Mode Password">Con-MINRT</td><td data-label="Device Name"><b><i>MIN-RT</i></b></td><td data-label="Enable Mode Password">Enb-MINRT</td></tr>
+      <tr><td data-label="Console Mode Password">Con-MINS1</td><td data-label="Device Name"><b><i>MIN-S1</i></b></td><td data-label="Enable Mode Password">Enb-MINS1</td></tr>
+      <tr><td data-label="Console Mode Password">Con-MINS2</td><td data-label="Device Name"><b><i>MIN-S2</i></b></td><td data-label="Enable Mode Password">Enb-MINS2</td></tr>
+      <tr><td data-label="Console Mode Password">Con-MINS3</td><td data-label="Device Name"><b><i>MIN-S3</i></b></td><td data-label="Enable Mode Password">Enb-MINS3</td></tr>
+      <tr><td data-label="Console Mode Password">Con-MINS4</td><td data-label="Device Name"><b><i>MIN-S4</i></b></td><td data-label="Enable Mode Password">Enb-MINS4</td></tr>
     </tbody>
   </table>
