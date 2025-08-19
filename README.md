@@ -3,7 +3,7 @@
 <p align="center">
   <a href="#overview">Overview</a>
   •
-  <a href="#upcoming-features">Upcoming Features</a>
+  <a href="#upcoming-features-as-of-8182025">Upcoming Features</a>
   •
   <a href="#documentation-menu">Documentation Menu</a>
 </p>
