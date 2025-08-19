@@ -505,7 +505,7 @@ Console/Enable Mode Passwords
       </tr>
     </thead>
     <tbody>
-      <tr><td data-label="Console Mode Password">Con-NYCRT</td><td data-label="Device Name"><span style="color: aqua; font-weight: bold;">NYC-RT</span></td><td data-label="Enable Mode Password">Enb-NYCRT</td></tr>
+      <tr><td data-label="Console Mode Password">Con-NYCRT</td><td data-label="Device Name">NYC-RT</td><td data-label="Enable Mode Password">Enb-NYCRT</td></tr>
       <tr><td data-label="Console Mode Password">Con-NYCS1</td><td data-label="Device Name">NYC-S1</td><td data-label="Enable Mode Password">Enb-NYCS1</td></tr>
       <tr><td data-label="Console Mode Password">Con-NYCS2</td><td data-label="Device Name">NYC-S1</td><td data-label="Enable Mode Password">Enb-NYCS2</td></tr>
       <tr><td data-label="Console Mode Password">Con-NYCS3</td><td data-label="Device Name">NYC-S3</td><td data-label="Enable Mode Password">Enb-NYCS3</td></tr>
