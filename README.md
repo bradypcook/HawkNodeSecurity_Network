@@ -24,12 +24,14 @@ Here's what's coming in the future (Phase 2 -- Date TBD):
 <li>Improved addressing between router links (/31) </li>
 <li>Access Control Lists </li>
 <li>ASA Firewall Devices </li>
+<li> DMZ Network Design </li>
 <li>NAT (Network Address Translation)</li>
 <li>Port Security (for switches) </li>
 <li>Restructured branches </li>
 <li>FTP instead of TFTP </li>
 <li>Email network </li>
 <li>Interface Descriptions </li>
+<li> Server VM Images (via Oracle VirtualBox)</li>
 <li>and more!! </li>
 </ul>
 
