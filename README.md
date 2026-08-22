@@ -18,21 +18,30 @@ NOTE: Due to the Activity Wizard, it may be harder to load the .pka file on some
 
 # Upcoming Features (as of 8/18/2025)
 
-Here's what's coming in the future (Phase 2 -- Date TBD):
+Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD):
 
 <ul>
-<li>Improved addressing between router links (/31) </li>
-<li>Access Control Lists </li>
-<li>ASA Firewall Devices </li>
+<li>Advanced Access Control Lists </li>
+<li>ASA Firewall Devices +  DMZ Network Design  </li>
 <li> DMZ Network Design </li>
-<li>NAT (Network Address Translation)</li>
 <li>Port Security (for switches) </li>
 <li>Restructured branches </li>
-<li>FTP instead of TFTP </li>
 <li>Email network </li>
-<li>Interface Descriptions </li>
-<li> Server VM Images (via Oracle VirtualBox)</li>
 <li>and more!! </li>
+</ul>
+
+# Phase 2 Upgrades for Summer/Fall 2026
+
+<ul>
+<li>Improving network addressing by using /31 subnets for transit links and /16 for campus sites. </li>
+<li>Removed the Salt Lake City, LA, Minneapolis, and NYC campuses and created the San Francisco, Denver, Chicago, and Boston campuses </li>
+<li>Implementation of HSRP (Hot Standby Router Protocol) and collapsed core design to increase network redundancy. </li>
+<li>Implemented BGP and EIGRP across sites to make the implementation of routing protocols more realistic with industry standards. </li>
+<li>Implemented NAT (Network Address Translation) between sites to improve realism.</li>
+<li>Implemented interface descriptions to connecting devices, helping to make future configuration easier.</li>
+<li>Removed office images and replaced them with zones in order to make the topology more understandable.</li>
+<li>Removed the console passwords in favor of keeping the enable mode password only in order to balance network security with easier accessibility.</li>
+<li>Rewrote documentation as needed.</li>
 </ul>
 
 # Documentation Menu
@@ -59,7 +68,7 @@ https://docs.google.com/document/d/1-Vc9t8vtXoVSt0ADlW3ko_1DJ-e-SblX3i97_mBOnME/
 
 # Network Design/Topology
 
-<img src="https://bradypcook.github.io/hns_logo_addr.png" alt="HawkNode Security Network Toplogy">
+<img src="https://bradycook.co/hns_logo.png" alt="HawkNode Security Network Toplogy">
 
 The network is set up in a ring configuration, with 2 external links to other branch campuses and 1 internal link to the campus itself. I would rather use a mesh topology; however, the Cisco 2911 routers only offer 3 physical Ethernet ports.
 
