@@ -68,9 +68,9 @@ https://docs.google.com/document/d/1-Vc9t8vtXoVSt0ADlW3ko_1DJ-e-SblX3i97_mBOnME/
 
 # Network Design/Topology
 
-<img src="https://bradycook.co/hns_logo.png" alt="HawkNode Security Network Toplogy">
+<img src="https://bradycook.co/project_logos/hns_logo.png" alt="HawkNode Security Network Toplogy">
 
-The network is set up in a ring configuration, with 2 external links to other branch campuses and 1 internal link to the campus itself. I would rather use a mesh topology; however, the Cisco 2911 routers only offer 3 physical Ethernet ports.
+The network is set up in a partial mesh configuration, with 2-4 connected campuses per site (via Fiber) and 2 internal connections (via copper cabling).
 
 # Router IP Addresses
 
