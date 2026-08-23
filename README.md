@@ -5,7 +5,7 @@
   •
   <a href="#upcoming-features-as-of-8182025">Upcoming Features</a>
   •
-  <a href="#documentation-menu">Documentation Menu</a>
+  <a href="#documentation-menu">Documentation & Analysis Menu</a>
 </p>
 
 # Overview
@@ -44,7 +44,7 @@ Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD)
 <li>Rewrote documentation as needed.</li>
 </ul>
 
-# Documentation Menu
+# Documentation + Analysis Menu
 
 <p align="center">
   <a href="#network-designtopology">Network Design/Topology</a>
@@ -66,6 +66,8 @@ Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD)
 <br />
 https://docs.google.com/document/d/1-Vc9t8vtXoVSt0ADlW3ko_1DJ-e-SblX3i97_mBOnME/export?format=pdf
 
+My Analysis for my design decisions can be viewed below:
+
 # Network Design/Topology
 
 <img src="https://bradycook.co/project_logos/hns_logo.png" alt="HawkNode Security Network Toplogy">
@@ -86,7 +88,7 @@ The network is set up in a partial mesh configuration, with 2-4 connected campus
     </thead>
     <tbody>
       <tr>
-        <td data-label="Device Name">DC-RT</td>
+        <td data-label="Device Name">WashDC-RT</td>
         <td data-label="Interface" class="mono">G0/0</td>
         <td data-label="IP Address" class="mono">1.1.1.1/24</td>
         <td data-label="OSPF Info (Process, Area)" class="mono">(1,0)</td>
@@ -258,7 +260,7 @@ The network is set up in a partial mesh configuration, with 2-4 connected campus
 
 # Host Device IP Addressing
 
-As shown above on the map, the IP Addressing follows a scheme where each campus branch has its own host portion of the IP; so for example the Austin branch has an IP of X.X.X.3, where the last bit makes up the portion that the hosts use (except for the NYC office, which has X.X.0.0). In terms of the network portion of the address, each VLAN has its own network portion (i.e. Floor1 has a network address of 1X.1X.1X.X and IOT-Devices has a network address of 7X.7X.7X.X)
+As shown above on the map, the IP Addressing follows a scheme where each campus branch has its own IP Network (ex: Austin branch has a network of 10.20.0.0/16). From there, the third octet is assigned to the VLAN (ex: VLAN 70 in the Austin office would have a network of 10.20.70.0/24). From there the last IP octet is dedicated to the host. 
 
 The following networks are correlated to the following VLANs:
 
