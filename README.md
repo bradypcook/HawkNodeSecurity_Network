@@ -542,11 +542,11 @@ Console/Enable Mode Passwords
       <tr><td data-label="Console Mode Password">Con-ATLS2</td><td data-label="Device Name"><b><i>ATL-S2</i></b></td><td data-label="Enable Mode Password">Enb-ATLS2</td></tr>
       <tr><td data-label="Console Mode Password">Con-ATLS3</td><td data-label="Device Name"><b><i>ATL-S3</i></b></td><td data-label="Enable Mode Password">Enb-ATLS3</td></tr>
       <tr><td data-label="Console Mode Password">Con-ATLS4</td><td data-label="Device Name"><b><i>ATL-S4</i></b></td><td data-label="Enable Mode Password">Enb-ATLS4</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSRT</td><td data-label="Device Name"><b><i>AUS-RT</i></b></td><td data-label="Enable Mode Password">auseden</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS1</td><td data-label="Device Name"><b><i>AUS-S1</i></b></td><td data-label="Enable Mode Password">Enb-AUSS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS2</td><td data-label="Device Name"><b><i>AUS-S2</i></b></td><td data-label="Enable Mode Password">Enb-AUSS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS3</td><td data-label="Device Name"><b><i>AUS-S3</i></b></td><td data-label="Enable Mode Password">Enb-AUSS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS4</td><td data-label="Device Name"><b><i>AUS-S4</i></b></td><td data-label="Enable Mode Password">Enb-AUSS4</td></tr>
+      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-EDGE</i></b></td><td data-label="Enable Mode Password">auseden</td></tr>
+      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-CORE1</i></b></td><td data-label="Enable Mode Password">ausco1en</td></tr>
+      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-CORE2</i></b></td><td data-label="Enable Mode Password">ausco2en</td></tr>
+      <tr><td data-label="Console Mode Password">Con-AUSS1</td><td data-label="Device Name"><b><i>AUS-SW1</i></b></td><td data-label="Enable Mode Password">Enb-AUSS1</td></tr>
+      <tr><td data-label="Console Mode Password">Con-AUSS2</td><td data-label="Device Name"><b><i>AUS-SW2</i></b></td><td data-label="Enable Mode Password">Enb-AUSS2</td></tr>
       <tr><td data-label="Console Mode Password">Con-LART</td><td data-label="Device Name"><b><i>LA-RT</i></b></td><td data-label="Enable Mode Password">Enb-LART</td></tr>
       <tr><td data-label="Console Mode Password">Con-LAS1</td><td data-label="Device Name"><b><i>LA-S1</i></b></td><td data-label="Enable Mode Password">Enb-LAS1</td></tr>
       <tr><td data-label="Console Mode Password">Con-LAS2</td><td data-label="Device Name"><b><i>LA-S2</i></b></td><td data-label="Enable Mode Password">Enb-LAS2</td></tr>
