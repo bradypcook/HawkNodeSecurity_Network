@@ -5,7 +5,7 @@
   •
   <a href="#upcoming-features-as-of-8182026">Upcoming Features</a>
   •
-  <a href="#documentation-and-analysis-menu">Documentation & Analysis Menu</a>
+  <a href="#documentation-menu">Documentation Menu</a>
 </p>
 
 # Overview
@@ -18,7 +18,7 @@ NOTE: Due to the Activity Wizard, it may be harder to load the .pka file on some
 
 # Upcoming Features (as of 8/18/2026)
 
-Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD):
+Here's what's coming in the future (Phase 3 -- Winter 2026/ Spring 2027, exact date TBD):
 
 <ul>
 <li>Advanced Access Control Lists </li>
@@ -30,7 +30,7 @@ Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD)
 <li>and more!! </li>
 </ul>
 
-# Phase 2 Upgrades for Summer/Fall 2026
+# Phase 2 Upgrades for Summer/Fall 2026 (Currently In Progress)
 
 <ul>
 <li>Improving network addressing by using /31 subnets for transit links and /16 for campus sites. </li>
@@ -44,7 +44,7 @@ Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD)
 <li>Rewrote documentation as needed.</li>
 </ul>
 
-# Documentation and Analysis Menu
+# Documentation Menu
 
 <p align="center">
   <a href="#network-designtopology">Network Design/Topology</a>
@@ -64,11 +64,13 @@ Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD)
   <a href="#passwords--security">Passwords & Security</a>
 </p>
 
+<!--
 \*A PDF version of the documentation can be downloaded at the link below:
 <br />
 https://docs.google.com/document/d/1-Vc9t8vtXoVSt0ADlW3ko_1DJ-e-SblX3i97_mBOnME/export?format=pdf
 
 My Analysis for my design decisions can be viewed below:
+-->
 
 # Network Design/Topology
 
@@ -264,7 +266,7 @@ The network is set up in a partial mesh configuration, with 2-4 connected campus
 
 As shown above on the map, the IP Addressing follows a scheme where each campus branch has its own IP Network (ex: Austin branch has a network of 10.20.0.0/16). From there, the third octet is assigned to the VLAN (ex: VLAN 70 in the Austin office would have a network of 10.20.70.0/24). From there the last IP octet is dedicated to the host. 
 
-Most of the IPs are handed out via DHCP (Dynamic Host Configuration Protocol), but there are a couple of static IPs (listed below) for critical services:
+Most of the IPs are handed out via DHCP (Dynamic Host Configuration Protocol) either through the CORE1 router or a specific-site server, but there are a couple of static IPs (listed below) for critical services:
 
   <table aria-describedby="desc">
     <thead>
@@ -278,21 +280,21 @@ Most of the IPs are handed out via DHCP (Dynamic Host Configuration Protocol), b
     <tbody>
       <tr>
         <td data-label="Server Name">Web-Server</td>
-        <td data-label="IP Address" class="mono">23.23.23.2</td>
+        <td data-label="IP Address" class="mono">10.20.60.5</td>
         <td data-label="Subnet Mask" class="mono">255.255.255.0</td>
-        <td data-label="Default Gateway" class="mono">23.23.23.1</td>
+        <td data-label="Default Gateway" class="mono">10.20.60.1</td>
       </tr>
       <tr>
         <td data-label="Server Name">File-Server</td>
-        <td data-label="IP Address" class="mono">23.23.23.3</td>
+        <td data-label="IP Address" class="mono">10.20.60.6</td>
         <td data-label="Subnet Mask" class="mono">255.255.255.0</td>
-        <td data-label="Default Gateway" class="mono">23.23.23.1</td>
+        <td data-label="Default Gateway" class="mono">10.20.60.1</td>
       </tr>
-      <tr>
+       <tr>
         <td data-label="Server Name">Backup_Server_1</td>
-        <td data-label="IP Address" class="mono">20.20.0.1</td>
-        <td data-label="Subnet Mask" class="mono">255.255.0.0</td>
-        <td data-label="Default Gateway" class="mono">20.20.20.1</td>
+        <td data-label="IP Address" class="mono">24.24.24.2</td>
+        <td data-label="Subnet Mask" class="mono">255.255.255.0</td>
+        <td data-label="Default Gateway" class="mono">24.24.24.1</td>
       </tr>
       <tr>
         <td data-label="Server Name">Backup_Server_2</td>
@@ -302,7 +304,11 @@ Most of the IPs are handed out via DHCP (Dynamic Host Configuration Protocol), b
       </tr>
     </tbody>
   </table>
+
 # Routing Protocol Information
+BGP
+EIGRP
+HSRP
 
 # WiFi Networks
 
@@ -399,7 +405,7 @@ All WiFi networks have a randomly generated password, signal strength of 250 met
         <td data-label="VLAN ID" class="mono">75</td>
       </tr>
       <tr>
-        <td data-label="VLAN Name">Non_Allocated_Ports</td>
+        <td data-label="VLAN Name">unusedPorts</td>
         <td data-label="VLAN ID" class="mono">200</td>
       </tr>
     </tbody>
@@ -446,11 +452,9 @@ Switchport Security (Switch ONLY)
 <br />
 Configuration items TBD
 
-Console/Enable Mode Passwords
+Console/Enable Mode Passwords are configured on network equipment and follow this format (in lowercast): [SITE][EDGE, CORE, or SWITCH][en] ex: auseden would be for Austin's edge switch
 <br />
-*Follow this format: RoleAbbr-SiteDevice
-<br />
-*COMMENT: While I know these passwords aren’t as secure, they follow this format for configuration purposes (as it would be difficult to remember random passwords for the entire network)
+While this format isn't really secure, this is meant to be for demonstration purposes as well as make network configuration easier.
 
  <table aria-describedby="desc">
     <thead>
@@ -479,6 +483,8 @@ Console/Enable Mode Passwords
       <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-EDGE</i></b></td><td data-label="Enable Mode Password">auseden</td></tr>
       <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-CORE1</i></b></td><td data-label="Enable Mode Password">ausco1en</td></tr>
       <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-CORE2</i></b></td><td data-label="Enable Mode Password">ausco2en</td></tr>
+      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-SW1</i></b></td><td data-label="Enable Mode Password">aussw1en</td></tr>
+      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-SW2</i></b></td><td data-label="Enable Mode Password">aussw2en</td></tr>
       <tr><td data-label="Console Mode Password">Con-AUSS1</td><td data-label="Device Name"><b><i>AUS-SW1</i></b></td><td data-label="Enable Mode Password">Enb-AUSS1</td></tr>
       <tr><td data-label="Console Mode Password">Con-AUSS2</td><td data-label="Device Name"><b><i>AUS-SW2</i></b></td><td data-label="Enable Mode Password">Enb-AUSS2</td></tr>
       <tr><td data-label="Console Mode Password">Con-LART</td><td data-label="Device Name"><b><i>LA-RT</i></b></td><td data-label="Enable Mode Password">Enb-LART</td></tr>
