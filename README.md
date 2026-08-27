@@ -3,7 +3,7 @@
 <p align="center">
   <a href="#overview">Overview</a>
   •
-  <a href="#upcoming-features-as-of-8182025">Upcoming Features</a>
+  <a href="#upcoming-features-as-of-8182026">Upcoming Features</a>
   •
   <a href="#documentation-and-analysis-menu">Documentation & Analysis Menu</a>
 </p>
@@ -16,7 +16,7 @@ I wanted to do this project to demonstrate my ability to practically set up and 
 
 NOTE: Due to the Activity Wizard, it may be harder to load the .pka file on some devices. For better performance, you can run the unlocked .pkt version.
 
-# Upcoming Features (as of 8/18/2025)
+# Upcoming Features (as of 8/18/2026)
 
 Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD):
 
