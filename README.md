@@ -3,9 +3,9 @@
 <p align="center">
   <a href="#overview">Overview</a>
   •
-  <a href="#upcoming-features-as-of-8182025">Upcoming Features</a>
+  <a href="#upcoming-features-as-of-8182026">Upcoming Features</a>
   •
-  <a href="#documentation-menu">Documentation & Analysis Menu</a>
+  <a href="#documentation-and-analysis-menu">Documentation & Analysis Menu</a>
 </p>
 
 # Overview
@@ -16,7 +16,7 @@ I wanted to do this project to demonstrate my ability to practically set up and 
 
 NOTE: Due to the Activity Wizard, it may be harder to load the .pka file on some devices. For better performance, you can run the unlocked .pkt version.
 
-# Upcoming Features (as of 8/18/2025)
+# Upcoming Features (as of 8/18/2026)
 
 Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD):
 
@@ -44,7 +44,7 @@ Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD)
 <li>Rewrote documentation as needed.</li>
 </ul>
 
-# Documentation + Analysis Menu
+# Documentation and Analysis Menu
 
 <p align="center">
   <a href="#network-designtopology">Network Design/Topology</a>
@@ -52,6 +52,8 @@ Here's what's coming in the future (Phase 3 -- Winter 2026/2027, exact date TBD)
   <a href="#router-ip-addresses">Router IP Addresses</a>
   •
   <a href="#host-device-ip-addressing">Host Device IP Addressing</a>
+   •
+  <a href="#routing-protocol-information">Routing Protocol Information</a>
    •
   <a href="#wifi-networks">WiFi Networks</a>
   •
@@ -262,52 +264,7 @@ The network is set up in a partial mesh configuration, with 2-4 connected campus
 
 As shown above on the map, the IP Addressing follows a scheme where each campus branch has its own IP Network (ex: Austin branch has a network of 10.20.0.0/16). From there, the third octet is assigned to the VLAN (ex: VLAN 70 in the Austin office would have a network of 10.20.70.0/24). From there the last IP octet is dedicated to the host. 
 
-The following networks are correlated to the following VLANs:
-
-<table aria-describedby="desc">
-    <thead>
-      <tr>
-        <th scope="col">VLAN Name</th>
-        <th scope="col">Network IP Address</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="VLAN Name">Floor1</td>
-        <td data-label="Network IP Address" class="mono">1X.1X.1X.X</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">Floor2</td>
-        <td data-label="Network IP Address" class="mono">2X.2X.2X.X</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">Floor3</td>
-        <td data-label="Network IP Address" class="mono">3X.3X.3X.X</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">Floor4</td>
-        <td data-label="Network IP Address" class="mono">4X.4X.4X.X</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">Floor5</td>
-        <td data-label="Network IP Address" class="mono">5X.5X.5X.X</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">Wireless-Devices</td>
-        <td data-label="Network IP Address" class="mono">6X.6X.6X.X</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">IOT-Devices</td>
-        <td data-label="Network IP Address" class="mono">7X.7X.7X.X</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">Management</td>
-        <td data-label="Network IP Address" class="mono">10X.10X.10X.X</td>
-      </tr>
-    </tbody>
-  </table>
-
-Additionally, the addressing information for the company servers is below (NOTE: Static IPs are configured for the servers to prevent DHCP issues)
+Most of the IPs are handed out via DHCP (Dynamic Host Configuration Protocol), but there are a couple of static IPs (listed below) for critical services:
 
   <table aria-describedby="desc">
     <thead>
@@ -345,6 +302,7 @@ Additionally, the addressing information for the company servers is below (NOTE:
       </tr>
     </tbody>
   </table>
+# Routing Protocol Information
 
 # WiFi Networks
 
@@ -413,44 +371,32 @@ All WiFi networks have a randomly generated password, signal strength of 250 met
     </thead>
     <tbody>
       <tr>
-        <td data-label="VLAN Name">Floor1</td>
+        <td data-label="VLAN Name">Wired/PC</td>
         <td data-label="VLAN ID" class="mono">10</td>
       </tr>
       <tr>
-        <td data-label="VLAN Name">Floor2</td>
+        <td data-label="VLAN Name">WiFi</td>
         <td data-label="VLAN ID" class="mono">20</td>
       </tr>
       <tr>
-        <td data-label="VLAN Name">Floor3</td>
+        <td data-label="VLAN Name">Office-Devices</td>
         <td data-label="VLAN ID" class="mono">30</td>
       </tr>
       <tr>
-        <td data-label="VLAN Name">Floor4</td>
+        <td data-label="VLAN Name">Management</td>
         <td data-label="VLAN ID" class="mono">40</td>
       </tr>
       <tr>
-        <td data-label="VLAN Name">Floor5</td>
+        <td data-label="VLAN Name">Voice-Traffice</td>
         <td data-label="VLAN ID" class="mono">50</td>
       </tr>
       <tr>
-        <td data-label="VLAN Name">Native</td>
-        <td data-label="VLAN ID" class="mono">55</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">Wireless-Devices</td>
+        <td data-label="VLAN Name">Servers</td>
         <td data-label="VLAN ID" class="mono">60</td>
       </tr>
       <tr>
-        <td data-label="VLAN Name">IOT-Devices</td>
-        <td data-label="VLAN ID" class="mono">70</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">Voice-Traffic</td>
+        <td data-label="VLAN Name">Native</td>
         <td data-label="VLAN ID" class="mono">75</td>
-      </tr>
-      <tr>
-        <td data-label="VLAN Name">Management</td>
-        <td data-label="VLAN ID" class="mono">100</td>
       </tr>
       <tr>
         <td data-label="VLAN Name">Non_Allocated_Ports</td>
@@ -463,7 +409,6 @@ All WiFi networks have a randomly generated password, signal strength of 250 met
 
 All etherchannels are configured in PAgP (Cisco proprietary EtherChannel protocol)
 <br />
-\*\*NOTE: Group Number 4 is only present in the LA branch
 
 <table aria-describedby="desc">
     <thead>
@@ -477,17 +422,6 @@ All etherchannels are configured in PAgP (Cisco proprietary EtherChannel protoco
         <td data-label="Interface Range" class="mono">f0/1-3</td>
         <td data-label="Group Number" class="mono">1</td>
       </tr>
-      <tr>
-        <td data-label="Interface Range" class="mono">f0/4-6</td>
-        <td data-label="Group Number" class="mono">2</td>
-      </tr>
-      <tr>
-        <td data-label="Interface Range" class="mono">f0/7-9</td>
-        <td data-label="Group Number" class="mono">3</td>
-      </tr>
-      <tr>
-        <td data-label="Interface Range" class="mono">f0/10-12**</td>
-        <td data-label="Group Number" class="mono">4**</td>
       </tr>
     </tbody>
   </table>
