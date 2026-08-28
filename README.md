@@ -23,9 +23,8 @@ Here's what's coming in the future (Phase 3 -- Winter 2026/ Spring 2027, exact d
 <ul>
 <li>Advanced Access Control Lists </li>
 <li>ASA Firewall Devices +  DMZ Network Design  </li>
-<li> DMZ Network Design </li>
+<li>Access List Controls for certain services </li>
 <li>Port Security (for switches) </li>
-<li>Restructured branches </li>
 <li>Email network </li>
 <li>and more!! </li>
 </ul>
@@ -38,7 +37,7 @@ Here's what's coming in the future (Phase 3 -- Winter 2026/ Spring 2027, exact d
 <li>Implementation of HSRP (Hot Standby Router Protocol) and collapsed core design to increase network redundancy. </li>
 <li>Implemented BGP and EIGRP across sites to make the implementation of routing protocols more realistic with industry standards. </li>
 <li>Implemented NAT (Network Address Translation) between sites to improve realism.</li>
-<li>Implemented interface descriptions to connecting devices, helping to make future configuration easier.</li>
+<li>Implemented interface descriptions between routers, helping to make future configuration easier.</li>
 <li>Removed office images and replaced them with zones in order to make the topology more understandable.</li>
 <li>Removed the console passwords in favor of keeping the enable mode password only in order to balance network security with easier accessibility.</li>
 <li>Rewrote documentation as needed.</li>
@@ -312,7 +311,8 @@ HSRP
 
 # WiFi Networks
 
-All WiFi networks have a randomly generated password, signal strength of 250 meters, use AES encryption, and have a naming scheme with the following: [BRANCH]-HNS
+
+There will be two main WiFi Networks: HNS-Employees and HNS-Guest at each of the branches. The details are documented below:
 
 <table aria-describedby="desc">
     <thead>
@@ -324,44 +324,14 @@ All WiFi networks have a randomly generated password, signal strength of 250 met
     </thead>
     <tbody>
       <tr>
-        <td data-label="Network Name">LA-HNS</td>
+        <td data-label="Network Name">HNS-Employees</td>
         <td data-label="Password" class="mono">tiYLkcO0YnN07^</td>
-        <td data-label="2.4 GHz Channel" class="mono">11</td>
-      </tr>
-      <tr>
-        <td data-label="Network Name">SLC-HNS</td>
-        <td data-label="Password" class="mono">AhdjtZW@!7pI3N</td>
-        <td data-label="2.4 GHz Channel" class="mono">10</td>
-      </tr>
-      <tr>
-        <td data-label="Network Name">Seattle-HNS</td>
-        <td data-label="Password" class="mono">fLW%#4K9DTqMoJ</td>
-        <td data-label="2.4 GHz Channel" class="mono">8</td>
-      </tr>
-      <tr>
-        <td data-label="Network Name">MIN-HNS</td>
-        <td data-label="Password" class="mono">Yf4#FNXe!OGyDm</td>
-        <td data-label="2.4 GHz Channel" class="mono">7</td>
-      </tr>
-      <tr>
-        <td data-label="Network Name">NYC-HNS</td>
-        <td data-label="Password" class="mono">w%x@6oPh^G1@2S</td>
-        <td data-label="2.4 GHz Channel" class="mono">6</td>
-      </tr>
-      <tr>
-        <td data-label="Network Name">WashDC-HNS</td>
-        <td data-label="Password" class="mono">jw5n$TS%802OT5</td>
-        <td data-label="2.4 GHz Channel" class="mono">3</td>
-      </tr>
-      <tr>
-        <td data-label="Network Name">Atlanta-HNS</td>
-        <td data-label="Password" class="mono">cOjw7JNTR8o^CY</td>
-        <td data-label="2.4 GHz Channel" class="mono">2</td>
-      </tr>
-      <tr>
-        <td data-label="Network Name">Austin-HNS</td>
-        <td data-label="Password" class="mono">7r53fAJH2%*cPr</td>
         <td data-label="2.4 GHz Channel" class="mono">1</td>
+      </tr>
+      <tr>
+        <td data-label="Network Name">HNS-Guest</td>
+        <td data-label="Password" class="mono">None</td>
+        <td data-label="2.4 GHz Channel" class="mono">11</td>
       </tr>
     </tbody>
   </table>
@@ -475,24 +445,22 @@ While this format isn't really secure, this is meant to be for demonstration pur
       <tr><td data-label="Console Mode Password">Con-DCS2</td><td data-label="Device Name"><b><i>DC-S2</i></b></td><td data-label="Enable Mode Password">Enb-DCS2</td></tr>
       <tr><td data-label="Console Mode Password">Con-DCS3</td><td data-label="Device Name"><b><i>DC-S3</i></b></td><td data-label="Enable Mode Password">Enb-DCS3</td></tr>
       <tr><td data-label="Console Mode Password">Con-DCS4</td><td data-label="Device Name"><b><i>DC-S4</i></b></td><td data-label="Enable Mode Password">Enb-DCS4</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLRT</td><td data-label="Device Name"><b><i>ATL-RT</i></b></td><td data-label="Enable Mode Password">Enb-ATLRT</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLS1</td><td data-label="Device Name"><b><i>ATL-S1</i></b></td><td data-label="Enable Mode Password">Enb-ATLS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLS2</td><td data-label="Device Name"><b><i>ATL-S2</i></b></td><td data-label="Enable Mode Password">Enb-ATLS2</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLS3</td><td data-label="Device Name"><b><i>ATL-S3</i></b></td><td data-label="Enable Mode Password">Enb-ATLS3</td></tr>
-      <tr><td data-label="Console Mode Password">Con-ATLS4</td><td data-label="Device Name"><b><i>ATL-S4</i></b></td><td data-label="Enable Mode Password">Enb-ATLS4</td></tr>
-      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-EDGE</i></b></td><td data-label="Enable Mode Password">auseden</td></tr>
-      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-CORE1</i></b></td><td data-label="Enable Mode Password">ausco1en</td></tr>
-      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-CORE2</i></b></td><td data-label="Enable Mode Password">ausco2en</td></tr>
-      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-SW1</i></b></td><td data-label="Enable Mode Password">aussw1en</td></tr>
-      <tr><td data-label="Console Mode Password">___</td><td data-label="Device Name"><b><i>AUS-SW2</i></b></td><td data-label="Enable Mode Password">aussw2en</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS1</td><td data-label="Device Name"><b><i>AUS-SW1</i></b></td><td data-label="Enable Mode Password">Enb-AUSS1</td></tr>
-      <tr><td data-label="Console Mode Password">Con-AUSS2</td><td data-label="Device Name"><b><i>AUS-SW2</i></b></td><td data-label="Enable Mode Password">Enb-AUSS2</td></tr>
       <tr><td data-label="Console Mode Password">Con-LART</td><td data-label="Device Name"><b><i>LA-RT</i></b></td><td data-label="Enable Mode Password">Enb-LART</td></tr>
       <tr><td data-label="Console Mode Password">Con-LAS1</td><td data-label="Device Name"><b><i>LA-S1</i></b></td><td data-label="Enable Mode Password">Enb-LAS1</td></tr>
       <tr><td data-label="Console Mode Password">Con-LAS2</td><td data-label="Device Name"><b><i>LA-S2</i></b></td><td data-label="Enable Mode Password">Enb-LAS2</td></tr>
       <tr><td data-label="Console Mode Password">Con-LAS3</td><td data-label="Device Name"><b><i>LA-S3</i></b></td><td data-label="Enable Mode Password">Enb-LAS3</td></tr>
       <tr><td data-label="Console Mode Password">Con-LAS4</td><td data-label="Device Name"><b><i>LA-S4</i></b></td><td data-label="Enable Mode Password">Enb-LAS4</td></tr>
       <tr><td data-label="Console Mode Password">Con-LAS5</td><td data-label="Device Name"><b><i>LA-S5</i></b></td><td data-label="Enable Mode Password">Enb-LAS5</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>DEN-EDGE</i></b></td><td data-label="Enable Mode Password">deneden</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>DEN-CORE1</i></b></td><td data-label="Enable Mode Password">denco1en</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>DEN-CORE2</i></b></td><td data-label="Enable Mode Password">denco2en</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>DEN-SW1</i></b></td><td data-label="Enable Mode Password">densw1en</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>DEN-SW2</i></b></td><td data-label="Enable Mode Password">densw2en</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>AUS-EDGE</i></b></td><td data-label="Enable Mode Password">auseden</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>AUS-CORE1</i></b></td><td data-label="Enable Mode Password">ausco1en</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>AUS-CORE2</i></b></td><td data-label="Enable Mode Password">ausco2en</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>AUS-SW1</i></b></td><td data-label="Enable Mode Password">aussw1en</td></tr>
+      <tr><td data-label="Console Mode Password">   </td><td data-label="Device Name"><b><i>AUS-SW2</i></b></td><td data-label="Enable Mode Password">aussw2en</td></tr>
       <tr><td data-label="Console Mode Password">Con-SLCRT</td><td data-label="Device Name"><b><i>SLC-RT</i></b></td><td data-label="Enable Mode Password">Enb-SLCRT</td></tr>
       <tr><td data-label="Console Mode Password">Con-SLCS1</td><td data-label="Device Name"><b><i>SLC-S1</i></b></td><td data-label="Enable Mode Password">Enb-SLCS1</td></tr>
       <tr><td data-label="Console Mode Password">Con-SLCS2</td><td data-label="Device Name"><b><i>SLC-S2</i></b></td><td data-label="Enable Mode Password">Enb-SLCS2</td></tr>
